@@ -259,7 +259,7 @@ def _expm(A):
 def _solve_P_Q(U, V):
     P = U + V
     Q = -U + V
-    return torch.solve(P, Q)[0]
+    return torch.linalg.solve(Q, P)[0]
 
 
 def _ell(A, m):
